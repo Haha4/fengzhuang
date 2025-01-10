@@ -24,15 +24,32 @@
       </div>
     </template>
   </xModel>
-  <el-button @click="openXmodel">弹出框</el-button>
+  <el-button @click="openXmodel">弹出1框</el-button>
+  <comfirm></comfirm>
+  <slotParent >
+    <template #default>
+      <div>这个是默认</div>
+    </template>
+    <template #body>
+      <div>这个是body</div>
+    </template>
+    <template #header="{nameSlot}">
+      <div>{{nameSlot}}</div>
+      <div>这个是header</div>
+    </template>
+  </slotParent>
 </template>
 
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 // import xFrom from './components/form/xForm.vue'
+// import  {h} from 'vue'
+import {getCurrentInstance} from 'vue'
 import xModelHeader from './components/xModel/components/xModelHeader.vue'
+import slotParent from './components/slotCom/slotParent.vue'
 import xModel from "./components/xModel/xModel.vue";
-import { ref } from "vue";
+import { ref,useTemplateRef } from "vue";
+console.log('11111111111111',useTemplateRef)
 const modelValue = ref(false);
 const openXmodel = () => {
   modelValue.value = true;

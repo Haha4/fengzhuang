@@ -36,6 +36,10 @@ const props = defineProps({
   },
   withHeader: {
     type: Boolean,
+    validator(value, props) {
+      console.log('propos验证',value,props)
+      debugger
+    },
     default: true,
   },
   withFooter: {
