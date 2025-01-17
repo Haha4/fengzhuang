@@ -10,6 +10,6 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 app.component('comfirm',comfirm)
 app.use(ElementPlus).mount('#app')
-const app2 = createApp(App)
-
-app2.use(ElementPlus).mount('#app2')
+// const app2 = createApp(App)
+//
+// app2.use(ElementPlus).mount('#app2')

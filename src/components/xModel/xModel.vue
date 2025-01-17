@@ -28,7 +28,6 @@
 import { defineProps,computed,ref } from "vue";
 import xModelHeader from "./components/xModelHeader.vue";
 import xModelFooter from "./components/xModelFooter.vue";
-// eslint-disable-next-line
 const props = defineProps({
   modelValue: {
     type: Boolean,
@@ -37,8 +36,6 @@ const props = defineProps({
   withHeader: {
     type: Boolean,
     validator(value, props) {
-      console.log('propos验证',value,props)
-      debugger
     },
     default: true,
   },
