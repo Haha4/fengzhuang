@@ -1,46 +1,48 @@
 <template>
+  <RouterView />
+
   <!-- <xFrom msg="Welcome to Your Vue.js App"/> -->
-  <xModel
-    v-model="modelValue"
-    @onconfirm="confirm"
-    @oncancel="cancel"
-    :withHeader="withHeader"
-    :show-close="false"
-    title="我的弹窗"
-    :withFooter="withFooter"
-    @update:modelValue="addAddressHideDialog"
-  >
-    <template #header>
-      <!-- <xModelHeader></xModelHeader> -->
-    </template>
-    <div>555
-   <div>11{{0 && '1122'  }}</div>
+<!--  <xModel-->
+<!--    v-model="modelValue"-->
+<!--    @onconfirm="confirm"-->
+<!--    @oncancel="cancel"-->
+<!--    :withHeader="withHeader"-->
+<!--    :show-close="false"-->
+<!--    title="我的弹窗"-->
+<!--    :withFooter="withFooter"-->
+<!--    @update:modelValue="addAddressHideDialog"-->
+<!--  >-->
+<!--    <template #header>-->
+<!--      &lt;!&ndash; <xModelHeader></xModelHeader> &ndash;&gt;-->
+<!--    </template>-->
+<!--    <div>555-->
+<!--   <div>11{{0 && '1122'  }}</div>-->
 
-    </div>
-    <template #footer>
-      <div>
-        <el-button type="primary">111</el-button>
-        <el-button type="primary">222</el-button>
-      </div>
-    </template>
-  </xModel>
-  <el-button @click="openXmodel">弹出1框</el-button>
-  <div>{{ singleselectValue }}</div>
+<!--    </div>-->
+<!--    <template #footer>-->
+<!--      <div>-->
+<!--        <el-button type="primary">111</el-button>-->
+<!--        <el-button type="primary">222</el-button>-->
+<!--      </div>-->
+<!--    </template>-->
+<!--  </xModel>-->
+<!--  <el-button @click="openXmodel">弹出1框</el-button>-->
+<!--  <div>{{ singleselectValue }}</div>-->
 <!--  <comfirm></comfirm>-->
-  <x-form label="测试表单"
-  v-model="singleselectValue"
-  :options="options" 
-  :slotName="slotName"
-  type="singleselect"
-   :tooltipConfig="{
-    content:'我是测试表单的提示',
-   placement:'top',
+<!--  <x-form label="测试表单"-->
+<!--  v-model="singleselectValue"-->
+<!--  :options="options" -->
+<!--  :slotName="slotName"-->
+<!--  type="singleselect"-->
+<!--   :tooltipConfig="{-->
+<!--    content:'我是测试表单的提示',-->
+<!--   placement:'top',-->
 
-  }">
-    <template v-slot:footer >
-      <span>1213132123</span>
-    </template>
-  </x-form>
+<!--  }">-->
+<!--    <template v-slot:footer >-->
+<!--      <span>1213132123</span>-->
+<!--    </template>-->
+<!--  </x-form>-->
 </template>
 
 <script setup>
